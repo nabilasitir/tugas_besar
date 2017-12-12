@@ -1,0 +1,145 @@
+<?php
+	session_start(); // Memulai Session
+	$error=''; // Variabel untuk menyimpan pesan error
+	if (isset($_POST['submit'])) {
+		if (empty($_POST['email']) || empty($_POST['password'])) {
+			$error = "Username or Password is invalid";
+		}
+		
+		else
+		{
+			// Variabel username dan password
+			$name=$_POST['name'];
+			$email=$_POST['email'];
+			$tgllhr=$_POST['tgllhr'];
+			$alamat=$_POST['alamat'];
+			$username=$_POST['username'];
+			$password=$_POST['password'];
+			// Membangun koneksi ke database
+			$connection = mysql_connect("localhost", "root", "");
+			// Mencegah MySQL injection 
+			$name = stripslashes($name);
+			$email = stripslashes($email);
+			$tgllhr = stripslashes($tgllhr);
+			$alamat = stripslashes($alamat);
+			$username = stripslashes($username);
+			$password = stripslashes($password);
+			$username = mysql_real_escape_string($username);
+			$password = mysql_real_escape_string($password);
+			// Seleksi Database
+			$db = mysql_select_db("gouinbdg", $connection);
+			// SQL query untuk memeriksa apakah karyawan terdapat di database?
+			$query = mysql_query("select * from admin where password='$password' AND username='$username'", $connection);
+			
+			$rows = mysql_num_rows($query);
+			
+			if ($rows == 1) {
+				$_SESSION['login_user']=$username; // Membuat Sesi/session
+				header("location: latihan.php"); // Mengarahkan ke halaman profil
+			} 
+			else {
+				$error = "Username atau Password belum terdaftar";
+			}
+			mysql_close($connection); // Menutup koneksi
+		}
+	}
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Bimbingan Testing Masuk UIN Bandung</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="aset/css/bootstrap.min.css" type="text/css">
+	<script src="aset/js/jquery.min.js"></script>
+	<script src="aset/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="#">GoUINBdg</a>
+		</div>
+		<ul class="nav navbar-nav">
+		  <li><a href="index.html">Beranda</a></li>
+		  <li><a href="tentang.html">Tentang</a></li>
+		  <li><a href="panduan.html">Panduan</a></li>
+		</ul>
+		
+		<ul class="nav navbar-nav navbar-right">
+		   <li class="active"><a href="#">Sign-Up <span class="glyphicon glyphicon-user"></span></a></li>
+		   <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login <span class="glyphicon glyphicon-log-in"></span><span class="caret"></span></a>
+			<ul class="dropdown-menu">
+			  <li><a href="login_peserta.html">Peserta</a></li>
+			  <li><a href="login_admin.html">Admin</a></li>
+			</ul>
+		  </li>
+		</ul>
+	  </div>
+	</nav>
+  
+	<div class="container">
+	  <div class="panel panel-default">
+		<div class="panel-heading"><h2>Sign-Up</h2></div>
+		<div class="panel-body" >
+			<form id="signupform" class="signUpEl form-horizontal" role="form" autocomplete="off" method="POST">
+				<div class="form-group">
+					<label for="name" class="col-md-3 col-sm-3 col-lg-2 control-label">Nama Lengkap</label>
+					<div class="col-sm-9 col-lg-6">
+						<input type="text" class="form-control" id="name"  name="name" required placeholder="Nama Lengkap">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="Password" class="col-md-3 col-sm-3 col-lg-2 control-label">Email</label>
+					<div class="col-sm-9 col-lg-6">
+						<input type="text" class="form-control" id="email" name="email" required placeholder="Email">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="tgllhr" class="col-md-3 col-sm-3 col-lg-2 control-label">Tanggal Lahir</label>
+					<div class="col-sm-9 col-lg-6">
+						<input type="text" class="form-control" id="tgllhr"  name="tgllhr" required placeholder="Tanggal Lahir">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="alamat" class="col-md-3 col-sm-3 col-lg-2 control-label">Alamat</label>
+					<div class="col-sm-9 col-lg-6">
+						<input type="text" class="form-control" id="alamat"  name="alamat" required placeholder="Alamat">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-md-3 col-sm-3 col-lg-2 control-label">Username</label>
+					<div class="col-sm-9 col-lg-6">
+						<input type="text" class="form-control" id="username"  name="username" required placeholder="Username">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="password" class="col-md-3 col-sm-3 col-lg-2 control-label">Password</label>
+					<div class="col-sm-9 col-lg-6">
+						<input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+						<input type="text" class="form-control" id="password-fake" name="password-fake" style="display: none;">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-9">
+						<button id="signUpBtn" name="signup" class="btn btn-default">Sign Up</button>
+						<input type="hidden" name="ip_adddrr" value="127.0.0.1"/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-sm-3 col-lg-2"></div>
+					<div class="col-md-6 col-sm-6 col-md-6" style="margin-bottom:100px">
+						Sudah menjadi member? silahkan <a href="login_peserta.html">Log-in di sini</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	  </div>
+	</div>
+
+</body>
+</html>
