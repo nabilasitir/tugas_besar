@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -5,9 +6,9 @@
 	<title>Bimbingan Testing Masuk UIN Bandung</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="aset/css/bootstrap.min.css" type="text/css">
-	<script src="aset/js/jquery.min.js"></script>
-	<script src="aset/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../aset/css/bootstrap.min.css" type="text/css">
+	<script src="../aset/js/jquery.min.js"></script>
+	<script src="../aset/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -26,8 +27,6 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
 		  <li><a href="index.php">Beranda</a></li>
-		  <li><a href="tentang.php">Tentang</a></li>
-		  <li><a href="panduan.php">Panduan</a></li>
 		</ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>

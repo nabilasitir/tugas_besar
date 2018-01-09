@@ -1,8 +1,8 @@
 <?php
 
-	function input_matkul(){
-		include "koneksi/koneksi.php";
-		$sql = "insert into peserta values( '$_POST[nama]', '$_POST[email]', '$_POST[tgl_lahir]', '$_POST[alamat]', '$_POST[password]')";
+	function signup(){
+		include "koneksi.php";
+		$sql = "insert into peserta (nama,email,tgl_lahir,alamat,password) values( '$_POST[nama]', '$_POST[email]', '$_POST[tgl_lahir]', '$_POST[alamat]', '$_POST[password]')";
 		$query = $link->query($sql);
 
 		if($query){
@@ -15,5 +15,7 @@
 			echo "</script>";
 		}
 	}
+
+	
 
 ?>

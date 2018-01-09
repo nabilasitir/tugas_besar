@@ -1,8 +1,8 @@
 <?php
-include('login.php'); // Memasuk-kan skrip Login 
+include('../koneksi/login.php'); // Memasuk-kan skrip Login 
 admin();
 if(isset($_SESSION['login_user'])){
-header("location: admin.php");
+	header("location: ../admin/index.php");
 }
 ?>
 
@@ -13,9 +13,9 @@ header("location: admin.php");
 	<title>Bimbingan Testing Masuk UIN Bandung</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="aset/css/bootstrap.min.css" type="text/css">
-	<script src="aset/js/jquery.min.js"></script>
-	<script src="aset/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../aset/css/bootstrap.min.css" type="text/css">
+	<script src="../aset/js/jquery.min.js"></script>
+	<script src="../aset/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -32,10 +32,10 @@ header("location: admin.php");
 		</ul>
 		
 		<ul class="nav navbar-nav navbar-right">
-		   <li><a href="sign-up_peserta.php">Sign-Up <span class="glyphicon glyphicon-user"></span></a></li>
+		   <li><a href="../peserta/sign-up_peserta.php">Sign-Up <span class="glyphicon glyphicon-user"></span></a></li>
 		   <li  class="active" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login <span class="glyphicon glyphicon-log-in"></span><span class="caret"></span></a>
 			<ul class="dropdown-menu">
-			  <li><a href="login_peserta.php">Peserta</a></li>
+			  <li><a href="../peserta/login_peserta.php">Peserta</a></li>
 			  <li class="active"><a href="#">Admin</a></li>
 			</ul>
 		  </li>

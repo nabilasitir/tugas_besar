@@ -44,7 +44,7 @@
         <li class="active"><a href="#section1">Menu Admin</a></li>
         <li><a href="dsoal.php">Data Soal </a></li>
         <li><a href="dnilai.php">Data Nilai</a></li>
-        <li><a href="dpeserta.php">Data Peserta</a></li>
+        <li><a href="#dpeserta.php">Data Peserta</a></li>
       </ul><br>
     </div>
    <div class="col-sm-9">
