@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +29,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
          <li><a href="peserta/sign-up_peserta.php">Sign-Up <span class="glyphicon glyphicon-user"></span></a></li>
-         <li  class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login <span class="glyphicon glyphicon-log-in"></span><span class="caret"></span></a>
+         <li   class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login <span class="glyphicon glyphicon-log-in"></span><span class="caret"></span></a>
       <ul class="dropdown-menu">
           <li><a href="peserta/login_peserta.php">Peserta</a></li>
           <li><a href="admin/login_admin.php">Admin</a></li>
@@ -54,7 +55,7 @@
       <div class="item">
         <img src="aset/img/g3.jpg" alt="GoUINBdg2" style="width:100%;">
       </div>
-	  
+    
     <div class="item">
         <img src="aset/img/uin.jpg" alt="GoUINBdg3" style="width:100%;">
       </div>
@@ -71,30 +72,47 @@
     </a>
   </div>
 </div>
-	
-	
-   <div class="container-fluid text-center">
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <br>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">GoUIN Link</a></li>
+        <li><a href="jurusan.php">Fakultas dan Jurusan UIN Bandung</a></li>
+        <li><a href="jalur_masuk.php">Jalur Masuk</a></li>
+       
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+   <div class="col-sm-9">
       <hr>
-      <h2>Panduan GoUINBdg</h2></div>
-	
-      <div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Step 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Step 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Step 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-  </div>
+      <h2>GoUINBdg</h2>
+            <p> GoUINBdg adalah sebuah website yang menyajikan layanan bimbingan berbasis online untuk masuk UIN Bandung. Setiap calon mahasiswa yang mengikuti bimbingan akan diberi latihan soal dan akan mendapatkan review dari hasil ujiannya.</p>
+    <br>
+    <h2>UIN Sunan Gunung Djati Bandung</h2>
+       <p>Universitas Islam Negeri Sunan Gunung Djati atau dikenal dengan nama UIN Bandung atau seringkali disingkat sebagai UIN SGD (dulu bernama IAIN Sunan Gunung Djati), adalah perguruan tinggi negeri berbasis Islam yang berkedudukan di Kecamatan Cibiru, Kota Bandung, Jawa Barat. Nama Sunan Gunung Djati diambil dari nama salah seorang Walisongo, tokoh penyebar agama Islam di Jawa.</p>
+     <p>Sejarah berdirinya Universitas Islam Negeri (UIN) Sunan Gunung Djati Bandung tidak lepas dari IAIN Sunan Gunung Djati Bandung karena UIN merupakan kelanjutan dan pengembangan dari IAIN Sunan Gunung Djati Bandung.
+
+IAIN Sunan Gunung Djati Bandung didirikan pada tanggal 8 April 1968 M bertepatan dengan 10 Muharram 1388 H berdasarkan Keputusan Menteri Agama RI Nomor 56 Tahun 1968. Kehadiran IAIN Sunan Gunung Djati Bandung merupakan hasil perjuangan para tokoh umat Islam Jawa Barat. Dimulai pada tahun 1967, sejumlah tokoh masyarakat, alim ulama, dan cendekiawan muslim Jawa Barat yang diprakarsai oleh K. H. Anwar Musaddad, K.H. A. Muiz, K.H. R. Sudja'i, dan Arthata dengan persetujuan gubernur Jawa Barat, mereka membentuk Panitia Perizinan Pendirian IAIN di Jawa Barat. Panitia tersebut kemudian disahkan oleh Menteri Agama RI melalui SK-MA No. 128 Tahun 1967.
+
+Selanjutnya, berdasarkan Surat Keputusan Menteri Agama RI Nomor 56 Tahun 1968, secara resmi berdiri IAIN Sunan Gunung Djati Bandung. Berbekal SK Menteri Agama tersebut, panitia membuka 4 Fakultas: Syari'ah, Tarbiyah, Ushuluddin di Bandung, dan Tarbiyah di Garut. IAIN Sunan Gunung Djati Bandung terdiri dari Fakultas Ushuluddin, Fakultas Syari'ah, Fakultas Tarbiyah di Bandung, sementara Fakultas Syari'ah dan fakultas lainnya yang ada di Bandung berlokasi di Jalan Lengkong Kecil No. 5.
+
+Pada tahun 1973, IAIN Sunan Gunung Djati pindah ke Jalan Tangkuban Parahu No. 14. Pada tahun 1974 IAIN Sunan Gunung Djati pindah lagi ke Jalan Cipadung (sekarang Jalan A.H. Nasution No. 105). Pada tahun 1970, dalam rangka rayonisasi, Fakultas Tarbiyah di Bogor dan Fakultas Syari'ah di Sukabumi yang semula berinduk kepada IAIN Syarif Hidayatullah Jakarta digabungkan pada Fakultas Induk di Bandung. Sedangkan untuk Fakultas Tarbiyah Cirebon yang semula berafiliasi ke IAIN Syarif Hidayatullah, pada tanggal 5 Maret 1976 menginduk ke IAIN Sunan Gunung Djati.
+
+Pada perkembangan berikutnya, tahun 1993, didirikanlah dua fakultas baru, yaitu Fakultas Dakwah dan Fakultas Adab. Pada tahun 1997, pengembangan diarahkan dalam bentuk penyelenggaraan Program Pascasarjana yang dimulai dengan membuka Program S2 (Pascasarjana).
+
+Pada tahun 1997, terjadi perubahan kebijakan penataan sistem rayonisasi untuk IAIN. Berdasarkan Surat Keputusan Presiden Nomor 11 Tahun 1997 tanggal 21 Maret 1997, Fakultas Tarbiyah Cirebon yang semula menjadi cabang Fakultas Tarbiyah IAIN Sunan Gunung Djati Bandung meningkat statusnya menjadi Sekolah Tinggi Agama Islam (STAIN) Cirebon. Demikian juga dengan Fakultas Syari'ah Serang yang semula merupakan cabang Fakultas Syari'ah IAIN Sunan Gunung Djati Bandung statusnya menjadi STAIN Serang.
+
+Berdasarkan Peraturan Presiden RI Nomor 57 Tahun 2005, tanggal 10 Oktober 2005, bertepatan dengan tanggal 6 Ramadhan 1426 H, IAIN berubah statusnya menjadi UIN Sunan Gunung Djati Bandung.</p>
+      
  <br> 
  <div class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT</h2>
@@ -117,18 +135,18 @@
       <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
       <div class="row">
         <div class="col-sm-12 form-group">
-		<script>
-			function myFunction() {
-				document.getElementById("demo").innerHTML ="terkirim";
-			}
-			function myFunction2() {
-				document.getElementById("tanggal").innerHTML = Date();
-			}
-		</script>
-		<button type="button"
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML ="terkirim";
+      }
+      function myFunction2() {
+        document.getElementById("tanggal").innerHTML = Date();
+      }
+    </script>
+    <button type="button"
         onclick="myFunction();myFunction2();">Send</button>
-		<p id="demo"></p>
-		<p id="tanggal"></p>  
+    <p id="demo"></p>
+    <p id="tanggal"></p>  
         </div>
       </div>
     </div>

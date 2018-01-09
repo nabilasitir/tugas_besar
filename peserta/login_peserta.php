@@ -1,8 +1,8 @@
 <?php
-include('login.php'); // Memasuk-kan skrip Login 
+include('../koneksi/login.php'); // Memasuk-kan skrip Login 
 peserta();
 if(isset($_SESSION['login_user'])){
-header("location: peserta.php");
+header("location: ../peserta/index.php");
 }
 ?>
 <!DOCTYPE html>
@@ -12,9 +12,9 @@ header("location: peserta.php");
 	<title>Bimbingan Testing Masuk UIN Bandung</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="aset/css/bootstrap.min.css" type="text/css">
-	<script src="aset/js/jquery.min.js"></script>
-	<script src="aset/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../aset/css/bootstrap.min.css" type="text/css">
+	<script src="../aset/js/jquery.min.js"></script>
+	<script src="../aset/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -25,9 +25,9 @@ header("location: peserta.php");
 		  <a class="navbar-brand" href="#">GoUINBdg</a>
 		</div>
 		<ul class="nav navbar-nav">
-		  <li><a href="index.php">Beranda</a></li>
-		  <li><a href="tentang.php">Tentang</a></li>
-		  <li><a href="panduan.php">Panduan</a></li>
+		  <li><a href="../index.php">Beranda</a></li>
+		  <li><a href="../tentang.php">Tentang</a></li>
+		  <li><a href="../panduan.php">Panduan</a></li>
 		</ul>
 		
 		<ul class="nav navbar-nav navbar-right">
@@ -35,7 +35,7 @@ header("location: peserta.php");
 		   <li  class="active" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login <span class="glyphicon glyphicon-log-in"></span><span class="caret"></span></a>
 			<ul class="dropdown-menu">
 			  <li class="active"><a href="#">Peserta</a></li>
-			  <li><a href="login_admin.php">Admin</a></li>
+			  <li><a href="../admin/login_admin.php">Admin</a></li>
 			</ul>
 		  </li>
 		</ul>
@@ -46,7 +46,7 @@ header("location: peserta.php");
 	  <div class="panel panel-default">
 		<div class="panel-heading"><h2>Login Peserta <h2></div>
 		<div class="panel-body" >
-			<form class="form-horizontal" role="form" id="fmLogin" autocomplete="off" method="post">
+			<form class="form-horizontal" role="form" id="fmLogin"  autocomplete="off" method="post">
 				<div class="form-group">
 					<label for="email" class="col-md-3 col-sm-3 col-lg-2 control-label">Email</label>
 					<div class="col-sm-5 col-md-4 col-lg-3">

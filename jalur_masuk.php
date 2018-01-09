@@ -1,8 +1,3 @@
-<?php
-	include "fungsi.php";
-	if(isset($_POST['submit'])){ input_komentar(); }
-	else { }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

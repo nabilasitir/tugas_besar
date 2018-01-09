@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 09, 2018 at 08:17 AM
+-- Generation Time: Jan 08, 2018 at 03:39 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -46,23 +46,15 @@ INSERT INTO `admin` (`username`, `password`, `ID`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `jawaban` (
-`id_jawaban` int(11) NOT NULL,
-  `id_peserta` int(11) NOT NULL,
+  `id_jawaban` int(11) NOT NULL,
+  `jawaban` varchar(50) DEFAULT NULL,
   `benar` int(11) DEFAULT NULL,
   `salah` int(11) DEFAULT NULL,
   `kosong` int(11) DEFAULT NULL,
-  `jumlah_soal` int(11) NOT NULL,
-  `nilai` int(20) NOT NULL,
-  `tanggal` date DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `jawaban`
---
-
-INSERT INTO `jawaban` (`id_jawaban`, `id_peserta`, `benar`, `salah`, `kosong`, `jumlah_soal`, `nilai`, `tanggal`) VALUES
-(1, 1, 0, 0, 0, 1, 0, '2018-01-09'),
-(2, 2, 1, 1, 0, 1, 100, '2018-01-09');
+  `tanggal` date DEFAULT NULL,
+  `peserta_id_peserta` int(11) NOT NULL,
+  `jumlah_soal` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -71,23 +63,33 @@ INSERT INTO `jawaban` (`id_jawaban`, `id_peserta`, `benar`, `salah`, `kosong`, `
 --
 
 CREATE TABLE IF NOT EXISTS `peserta` (
-`id_peserta` int(20) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `email` varchar(50) NOT NULL,
   `tgl_lahir` varchar(10) NOT NULL,
   `alamat` varchar(100) NOT NULL,
   `password` varchar(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `peserta`
 --
 
-INSERT INTO `peserta` (`id_peserta`, `nama`, `email`, `tgl_lahir`, `alamat`, `password`) VALUES
-(1, 'Nabila Siti R', 'nabilasitir@gmail.com', '27 July 19', 'Bandung', 'apa'),
-(2, 'sridewi', 'sridewi@gmail.com', '718928', 'Bandung', 'apa'),
-(3, 'Farisa Barky', 'farisa@gmail.com', '10-Oktober', 'Kp. Cipondoh Girang', 'farisa'),
-(27, 'sridew', 'sri@gmail.com', '25-05-1998', 'jakarta', 'dewi');
+INSERT INTO `peserta` (`nama`, `email`, `tgl_lahir`, `alamat`, `password`) VALUES
+('Nabila Siti R', 'nabilasitir@gmail.com', '27 July 19', 'Bandung', 'apa'),
+('sridewi', 'sridewi@gmail.com', '718928', 'Bandung', 'apa'),
+('Farisa Barky', 'farisa@gmail.com', '10-Oktober', 'Kp. Cipondoh Girang', 'farisa'),
+('', '', '', '', ''),
+('', '', '', '', ''),
+('', '', '', '', ''),
+('', '', '', '', ''),
+('', '', '', '', ''),
+('', '', '', '', ''),
+('', '', '', '', ''),
+('', '', '', '', ''),
+('', '', '', '', ''),
+('', '', '', '', ''),
+('', '', '', '', ''),
+('', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -139,18 +141,6 @@ ALTER TABLE `admin`
  ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `jawaban`
---
-ALTER TABLE `jawaban`
- ADD PRIMARY KEY (`id_jawaban`);
-
---
--- Indexes for table `peserta`
---
-ALTER TABLE `peserta`
- ADD PRIMARY KEY (`id_peserta`);
-
---
 -- Indexes for table `tbl_soal`
 --
 ALTER TABLE `tbl_soal`
@@ -165,16 +155,6 @@ ALTER TABLE `tbl_soal`
 --
 ALTER TABLE `admin`
 MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `jawaban`
---
-ALTER TABLE `jawaban`
-MODIFY `id_jawaban` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `peserta`
---
-ALTER TABLE `peserta`
-MODIFY `id_peserta` int(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT for table `tbl_soal`
 --
